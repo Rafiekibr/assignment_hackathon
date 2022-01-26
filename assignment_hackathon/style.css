@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.head,
+.paragraph,
+.footer,
+.par2,
+form {
+    border: black 1px solid;
+    color: brown;
+    background-color: rgb(245, 229, 168);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    padding: 40px; 
+}
+
+.p1,
+.p2,
+.p3 {
+    background-color: rgb(226, 229, 155);
+    color: crimson;
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+h2 {
+    color: brown;
+    text-align: center;
+}
+
+.paragraph, 
+.par2 {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ptext,
+label {
+    font-size: 14px;
+    color: black;
+}
+
+.footer {
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+
+body {
+    background-color: rgb(218, 235, 217);
+}
+
+li {
+    list-style: none;
+    padding: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+form {
+    font-size: 14px; 
+}
+
+input,
+textarea {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.head {
+    grid-area: h;
+}
+
+.p1 {
+    grid-area: p1;
+}
+
+.p2 {
+    grid-area: p2;
+}
+
+.p3 {
+   grid-area: p3;
+}
+
+.paragraph {
+    grid-area: par;
+}
+
+
+.footer {
+    grid-area: f;
+}
+
+.par2 {
+    grid-area: par2;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "h"
+    "p1"
+    "p2"
+    "p3"
+    "par"
+    "par2"
+    "f";
+}
+
+.container3, 
+.container4, 
+.container5 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "h"
+    "par";
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-color: rgb(3, 78, 3);
+    }
+
+    .head,
+    .paragraph,
+    .footer,
+    form, 
+    .par2 {
+        background-color: rgb(196, 211, 143);
+}
+    .p1,
+    .p2,
+    .p3 {
+        background-color: rgb(243, 192, 125);   
+    }
+
+    .ptext {
+        font-size: 15px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;     
+    }
+
+    .head {
+        grid-column:  1 / 5;
+    }
+
+    .p1 {
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+
+    .p2 {
+        grid-column: 3 / -1;
+        grid-row: 2 / 3;
+    }
+
+    .p3 {
+        grid-column: 1 / 4;
+    }
+
+    .par2 {
+        grid-column: 4 / 5;
+        grid-row: 4 / 6;
+    }
+
+    .paragraph {
+        grid-column: 1 / 4;
+    }
+
+    .footer {
+        grid-column: 1 / 6;
+    }
+
+    .container3, 
+        .container4, 
+    .container5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .head3, 
+    .head4, 
+    .head5 {
+        grid-column: 1 / 5;
+    }
+
+    .paragraph3, 
+    .paragraph4, 
+    .paragraph5 {
+        grid-column: 2 / 4;
+    }
+
+
+}
